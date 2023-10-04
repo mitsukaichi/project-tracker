@@ -1,5 +1,9 @@
 // Show current timestamp at the header
 
-$("#current_time").text(dayjs());
+function updateTime() {
+    var timerInterval = setInterval(function() {
+        $("#current_time").text(dayjs());
+    }, 1000);
+  };
 
-console.log(dayjs());
+  updateTime();
